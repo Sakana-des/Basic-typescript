@@ -10,3 +10,9 @@
  * 
  * display the book data using console.log.
  */
+const Tittle : Array<string> = ["Majono","Terpikat","Ketika bumi"],
+      ISBN : Array<number> = [123,122,133],
+      author : Array<string> = ["soheb", "bayu", "Badrush"],
+      total_page : Array<number> = [10,11,12],
+      category : Array<string> = ["adven", "romen", "knowledge"],
+      available : Array<boolean> = [true,false];

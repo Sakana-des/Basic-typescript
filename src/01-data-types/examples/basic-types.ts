@@ -4,10 +4,13 @@
  * Run: npm run example src/01-data-types/examples/basic-types.ts
  */
 
-// Primitive types
-const studentName: string = "Alice";
-const age: number = 20;
-const isEnrolled: boolean = true;
+// Primitive types cons diubah klo ga let
+const studentName: string = "Alice",
+      age: number = 20,
+      isEnrolled: boolean = true;
+
+      let price = "100";
+      let total = price + 10;
 
 // Arrays
 const scores: number[] = [85, 90, 78];
@@ -26,7 +29,7 @@ enum Grade {
 // Any — avoid when possible; use when type is truly unknown
 let flexibleValue: any = "hello";
 flexibleValue = 42;
-
+  
 // Unknown — safer alternative to any
 let userInput: unknown = "some input";
 if (typeof userInput === "string") {

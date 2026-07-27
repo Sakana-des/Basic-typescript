@@ -9,3 +9,18 @@
  * 
  * display the attendance data using console.log.
  */
+
+const EmployeeName : Array<string> = ["Majono","Terpikat","Ketika bumi"],
+      EmployeeID : Array<number> = [123,122,133],
+      date : Array<number> = [1, 2, 3],
+      total_page : Array<number> = [10,11,12],
+      category : Array<string> = ["adven", "romen", "knowledge"],
+      present : Array<boolean> = [true,false,true];
+
+      const car: { type: string, model: string, year: number } = {
+        type: "Toyota",
+        model: "Corolla",
+        year: 2009;
+        
+        type:"bmw";
+        };
