@@ -11,3 +11,67 @@
  * 
  * display the registration data using console.log.
  */
+const Online1: {StudentID : string,
+                Fullname: string,
+                GradeLvl: number,
+                CourseID: string,
+                CourseTittle: string,
+                InstructorName: string,
+                LearningHour: number,
+                date: string,
+                PaymentComplete: boolean}=
+    {
+    StudentID : "TS1",
+    Fullname : "icarus",
+    GradeLvl : 2,
+    CourseID : "TSC1",
+    CourseTittle : "RPL",
+    InstructorName : "Lionel",
+    LearningHour : 5,
+    date: "01-07-2021",
+    PaymentComplete : true
+    };
+
+const Online2: {StudentID : string,
+                Fullname: string,
+                GradeLvl: number,
+                CourseID: string,
+                CourseTittle: string,
+                InstructorName: string,
+                LearningHour: number,
+                date: string,
+                PaymentComplete: boolean}=
+    {
+    StudentID : "TS2",
+    Fullname : "icaris",
+    GradeLvl : 1,
+    CourseID : "TSC1",
+    CourseTittle : "RPL",
+    InstructorName : "Lionel",
+    LearningHour : 5,
+    date: "01-07-2021",
+    PaymentComplete : true
+    };
+
+const Online3: {StudentID : string,
+                Fullname: string,
+                GradeLvl: number,
+                CourseID: string,
+                CourseTittle: string,
+                InstructorName: string,
+                LearningHour: number,
+                date: string,
+                PaymentComplete: boolean}=
+    {
+    StudentID : "TS1",
+    Fullname : "icares",
+    GradeLvl : 2,
+    CourseID : "TSC2",
+    CourseTittle : "TKJ",
+    InstructorName : "Cristiano",
+    LearningHour : 19,
+    date: "01-07-2010",
+    PaymentComplete : true
+    };
+
+    console.log(Online1, Online2, Online3);

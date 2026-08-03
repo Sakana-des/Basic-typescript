@@ -9,3 +9,38 @@
  * 
  * display the product data using console.log.
  */
+
+    const Product1: {ProductCode : string, ProductName: string, SellPrice: number, stock: number, Weight: string, Rating: number, AvgRate: number, discounted: boolean} = {
+        ProductCode : "PC1",
+        ProductName : "keyboard",
+        SellPrice : 850000,
+        stock : 128,
+        Weight : "10ons",
+        Rating : 10,
+        AvgRate : 9.3,
+        discounted : true
+    };
+
+    const Product2: {ProductCode : string, ProductName: string, SellPrice: number, stock: number, Weight: string, Rating: number, AvgRate: number, discounted: boolean} = {
+        ProductCode : "PC2",
+        ProductName : "Mouse",
+        SellPrice : 50000,
+        stock : 112,
+        Weight : "2ons",
+        Rating : 10,
+        AvgRate : 9.5,
+        discounted : true
+    };
+
+    const Product3: {ProductCode : string, ProductName: string, SellPrice: number, stock: number, Weight: string, Rating: number, AvgRate: number, discounted: boolean} = {
+        ProductCode : "PC3",
+        ProductName : "monitor",
+        SellPrice : 1500000,
+        stock : 120,
+        Weight : "12ons",
+        Rating : 10,
+        AvgRate : 9.3,
+        discounted : false
+    };
+
+    console.log(Product1, Product2, Product3);

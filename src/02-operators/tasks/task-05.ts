@@ -33,3 +33,31 @@
  * - Calculate the remaining scholarship budget.
  * - Display whether the student is accepted.
  */
+const budget:number = 500000000;
+const bea:number = 12000000
+
+const GPA:number = 3.89;
+const reqGPA = GPA >= 3.75;
+console.log("===GPA===")
+console.log(`${GPA} hasil ${reqGPA? "Pass" : "Fail"}`)
+
+const Fincome:number = 4200000;
+const reqFincome = Fincome < 5000000;
+console.log("===Fincome===")
+console.log(`${Fincome} hasil ${reqFincome? "Pass" : "Fail"}`);
+
+const Competition:number = 4;
+const reqComp = Competition >= 3;
+console.log("===Competition===")
+console.log(`${Competition} hasil ${reqComp? "Pass" : "Fail"}`);
+
+const Disciplinary:boolean = true;
+console.log("===Disciplinary===")
+console.log(`${Disciplinary} hasil ${Disciplinary? "Pass" : "Fail"}`);
+
+const Documents:boolean = true;
+console.log("===Document===")
+console.log(`${Documents} hasil ${Documents? "Pass" : "Fail"}`);
+
+const ScholarshipAmount = reqGPA && reqFincome && reqComp && Disciplinary && Documents ? "12000000" : "0" ;
+console.log("Jumlah didapat dari beasiswa", ScholarshipAmount)

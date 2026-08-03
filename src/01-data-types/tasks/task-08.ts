@@ -21,3 +21,35 @@
  * 2. Store the temperature data in a single collection.
  * 3. Display the temperature data using console.log.
  */
+const temp: {Time: string, Temp: number, }={
+    Time: "08:00", Temp: 24.5
+};
+const temp2: {Time: string, Temp: number, }={
+    Time: "09:00", Temp: 25.1
+};
+const temp3: {Time: string, Temp: number, }={
+    Time: "10:00", Temp: 26.8
+};
+const temp4: {Time: string, Temp: number, }={
+    Time: "11:00", Temp: 28.4
+};
+const temp5: {Time: string, Temp: number, }={
+    Time: "12:00", Temp: 30.2
+};
+const temp6: {Time: string, Temp: number, }={
+    Time: "13:00", Temp: 31.1
+};
+const temp7: {Time: string, Temp: number, }={
+    Time: "14:00", Temp: 30.7
+};
+const temp8: {Time: string, Temp: number, }={
+    Time: "15:00", Temp: 29.3,
+};
+    console.log(temp);
+    console.log(temp2);
+    console.log(temp3);
+    console.log(temp4);
+    console.log(temp5);
+    console.log(temp6);
+    console.log(temp7);
+    console.log(temp8);

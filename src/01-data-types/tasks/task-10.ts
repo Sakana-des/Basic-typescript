@@ -16,3 +16,9 @@
  * 2. Store the product data in a single collection.
  * 3. Display the product data using console.log.
  */
+const ProductCode: Array<String>=["KB001", "MS002", "HD003", "HP004"];
+const ProductName: Array<String>=["Mechanical Keyboard", "Wireless Mouse", "External SSD 1TB", "Gaming Headset"];
+const Quantity: Array<number>=[1, 2, 1, 1];
+const Fshipping: Array<boolean>=[true, true, false, true];
+
+console.log(ProductCode, ProductName, Quantity, Fshipping);

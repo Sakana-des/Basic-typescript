@@ -14,3 +14,20 @@
  * Task: Store and display the result in a variable named "isEligible"
 
  */
+const score:number = 82;
+const result = score >= 75;
+console.log("\n=== Final Score ===");
+console.log(`Score ${score}: ${result ? "Pass" : "Fail"}`);
+
+const Attendance:number = 94;
+const results = Attendance >= 90;
+console.log("\n=== Attendance ===");
+console.log(`Score ${Attendance}: ${results? "Pass" : "Fail"}`);
+
+const Paid:boolean =true;
+console.log("\n=== Tuition Paid ===");
+console.log(`Score ${Paid}: ${Paid? "Pass" : "Fail"}`);
+
+const isEligible =  result && results && Paid ? "Yes Eligible" : "Not Eligible";
+console.log("\n=== Eligible? ===");
+console.log(` ${isEligible}`)

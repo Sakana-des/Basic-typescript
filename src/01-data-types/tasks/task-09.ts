@@ -14,3 +14,9 @@
  * 2. Store the participant data in a single collection.
  * 3. Display the participant data using console.log.
  */
+const StudentID: Array<String>=["ST001", "ST002","ST003"],
+      Name: Array<String>=["Ahmad Fauzi", "Siti Nurhaliza","Budi Santoso"],
+      Age: Array<number>=[16, 17,16],
+      HasPaid: Array<boolean>=[true, false,true];
+
+      console.log(StudentID, Name, Age, HasPaid);

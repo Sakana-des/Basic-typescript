@@ -33,7 +33,7 @@ console.log("!hasTicket:", !hasTicket);
 
 // Assignment operators
 let counter = 0;
-counter += 5;
+counter += 5;-
 counter *= 2;
 console.log("\n=== Assignment ===");
 console.log("counter:", counter);

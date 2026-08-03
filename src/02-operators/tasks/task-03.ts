@@ -17,3 +17,14 @@
  * - Bonus
  * - Final salary
  */
+    const overtime = 12;
+    const rate = 50000;
+    const basicSal = 5000000;
+
+    const overtimePay = overtime * rate;
+    const bonus = overtime >10 ? 300000 : 0
+    const total = overtimePay + bonus;
+    console.log(`overtimePay : ${overtimePay}`);
+    console.log(`bonus : ${bonus}`);
+    console.log(`FinalSalary : ${total + basicSal}`);
+

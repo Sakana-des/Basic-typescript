@@ -15,7 +15,7 @@
  * 5. Display the product data using console.log.
  */
 const product : string = "Keyboard",
-      Price : number = 85000,
+      Price : number = 850000,
       Code : string = "KBR-001",
       Discount_Flash_sale : number = 0.25,
       Member_prem : boolean = true;

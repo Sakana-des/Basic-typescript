@@ -17,10 +17,34 @@ const EmployeeName : Array<string> = ["Majono","Terpikat","Ketika bumi"],
       category : Array<string> = ["adven", "romen", "knowledge"],
       present : Array<boolean> = [true,false,true];
 
-      const car: { type: string, model: string, year: number } = {
-        type: "Toyota",
-        model: "Corolla",
-        year: 2009;
-        
-        type:"bmw";
+      const attendance1 : { employeeID: number, employeeName: string, date: number, checkin : number, checkout :number, WorkHour : number, presented : boolean } = {
+        employeeID:1,
+        employeeName:"Badrush",
+        date:36,
+        checkin:7,
+        checkout:17,
+        WorkHour:10,
+        presented:true
         };
+
+      const attendance2 : { employeeID: number, employeeName: string, date: number, checkin : number, checkout :number, WorkHour : number, presented : boolean } = {
+        employeeID:2,
+        employeeName:"Bayu",
+        date:36,
+        checkin:8,
+        checkout:17,
+        WorkHour:9,
+        presented:true
+        };
+
+      const attendance3 : { employeeID: number, employeeName: string, date: number, checkin : number, checkout :number, WorkHour : number, presented : boolean } = {
+        employeeID:3,
+        employeeName:"cipung",
+        date:36,
+        checkin:6,
+        checkout:17,
+        WorkHour:11,
+        presented:true
+        };
+
+        console.log(attendance1, attendance2, attendance3)
