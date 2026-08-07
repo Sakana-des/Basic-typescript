@@ -27,3 +27,21 @@
  * 2. Implement the airline decision process.
  * 3. Display the correct message.
  */
+const name:string= "Fajar Nugroho";
+let check:boolean= true,
+    Cabin:String= "Economy",
+    Baggage:number = 24;
+
+    if(check == true){
+        if(Baggage > 20){
+            if(Cabin=="Business"){
+                console.log(`Extra baggage allowed.`)
+            }else{
+                console.log(`Additional baggage fee required.`)
+            }
+        }else{
+            console.log(`Proceed to boarding pass printing.`)
+        }
+    }else{
+        console.log(`Please complete online check-in first.`)
+    }

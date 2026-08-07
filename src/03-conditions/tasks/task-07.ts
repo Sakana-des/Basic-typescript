@@ -30,3 +30,18 @@
  * 2. Implement both screening stages.
  * 3. Display the loan decision.
  */
+const NAme:string= "Andi Wijaya";
+let Monthly:number= 10000000,
+    Credit:number= 725,
+    Debt:number= 2500000,
+    PermEmployee:Boolean= true;
+
+    if(Monthly >= 8000000 && Credit >= 700){
+        if( Debt < 0.30 * Monthly && PermEmployee == true){
+            console.log(`Loan Approved`)
+        }else{
+            console.log(`Manual Review`)
+        }
+    }else{
+        console.log(`Loan Rejected`)
+    }

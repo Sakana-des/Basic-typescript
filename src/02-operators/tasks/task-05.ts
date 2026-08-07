@@ -41,7 +41,7 @@ const reqGPA = GPA >= 3.75;
 console.log("===GPA===")
 console.log(`${GPA} hasil ${reqGPA? "Pass" : "Fail"}`)
 
-const Fincome:number = 4200000;
+const Fincome:number = 5000000;
 const reqFincome = Fincome < 5000000;
 console.log("===Fincome===")
 console.log(`${Fincome} hasil ${reqFincome? "Pass" : "Fail"}`);
@@ -60,4 +60,5 @@ console.log("===Document===")
 console.log(`${Documents} hasil ${Documents? "Pass" : "Fail"}`);
 
 const ScholarshipAmount = reqGPA && reqFincome && reqComp && Disciplinary && Documents ? "12000000" : "0" ;
+console.log("Apakah Lulus? ", reqGPA && reqFincome && reqComp && Disciplinary && Documents? "Lulus" : "TIdak")
 console.log("Jumlah didapat dari beasiswa", ScholarshipAmount)

@@ -14,3 +14,11 @@
  * 3. Display the evaluation result. If eligible will display "Bonus Approved", 
  * otherwise display "Bonus not approved"
  */
+const Nama:string = "Dimas Pratama",
+      PerfromScore:number = 78;
+
+if (PerfromScore >= 80){
+    console.log("Bonus Approved")
+}else{
+    console.log("Bonus not approved")
+}

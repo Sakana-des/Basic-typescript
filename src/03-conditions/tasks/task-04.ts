@@ -22,3 +22,20 @@
  * 2. Implement the logic using nested if statements.
  * 3. Display the reservation result.
  */
+const Name:String= "Nadia Putri";
+let   PremiumMem:Boolean= true,
+      RoomAv:Boolean= false;
+
+      if(RoomAv == true){
+        if(PremiumMem == true){
+            console.log(`Premium members receive a free room upgrade`)
+        }else{
+            console.log(`Regular customers receive the reserved room only.`)
+        }
+      }else{
+        if(PremiumMem == true){
+            console.log(`Premium members are placed on the priority waiting list.`)
+        }else{
+            console.log(`Regular customers are informed that no rooms are available.`)
+        }
+      }
