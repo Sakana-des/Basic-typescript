@@ -35,3 +35,20 @@ const sales = [
 640000,
 18000
 ]
+let total = 0
+let jumlah = 0
+let High = sales[0]
+let low = sales[0]
+let thremore = 0
+let avg = 0
+
+for(let i = 0; i < sales.length; i++){
+    const sale = sales[i]
+    jumlah = total+=sale
+    
+    if(High > sales[0]){
+        
+    }
+}
+console.log(`Total sales revenue ${jumlah}`)
+console.log(High)

@@ -12,6 +12,8 @@
  * Create the following functions:
  */
 
+import { Socket } from "node:dgram";
+
 const sales = [
   125000,
   780000,
@@ -26,7 +28,7 @@ const sales = [
 ];
 
 function calculateTotalSales(sales: number[]): number {
-
+return sales.reduce((t,n,i)=>t+n,0)
 }
 
 function findHighestTransaction(sales: number[]): number {

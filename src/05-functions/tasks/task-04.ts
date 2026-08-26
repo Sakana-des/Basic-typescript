@@ -13,6 +13,7 @@
  * - Display the report inside the function.
  * - The function should not return any value.
  */
+type student={name:string, present: boolean}
 const attendances = [
     { name: "Alya", present: true },
     { name: "Budi", present: false },
@@ -20,3 +21,19 @@ const attendances = [
     { name: "Dimas", present: true },
     { name: "Eka", present: false }
 ];
+let masuk = 0
+let gak:string[] = []
+
+
+function printAttendanceReport(student:student[]){
+    for(let a of student){
+        if(a.present){
+            masuk++
+        }else{
+            gak.push(a.name);
+        }
+    }
+    console.log(`masuk ${masuk} tidak masuk ${gak.length}`)
+    console.log(gak)
+}
+printAttendanceReport(attendances);

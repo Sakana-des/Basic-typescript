@@ -24,3 +24,11 @@
  * 5. Display every student's final grade.
 
  */
+let total = 0
+
+function calculateFinalGrade(Name:string, Assignment:number, Midterm:number, Final:number,){
+return `Hasil ${Name} ${Assignment * 0.30} ${Midterm * 0.30} ${Final * 0.40} ${total = (Assignment + Midterm + Final) / 3}`;
+}
+
+let Hasil = calculateFinalGrade("Alya ", 85, 80, 92)
+console.log({Hasil},{total})
