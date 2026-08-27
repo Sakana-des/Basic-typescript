@@ -11,9 +11,6 @@
  * Student Tasks
  * Create the following functions:
  */
-
-import { Socket } from "node:dgram";
-
 const sales = [
   125000,
   780000,
@@ -32,17 +29,22 @@ return sales.reduce((t,n,i)=>t+n,0)
 }
 
 function findHighestTransaction(sales: number[]): number {
-
+return sales.sort()[sales.length-1]
 }
 
 function findLowestTransaction(sales: number[]): number {
-
+return sales.sort()[0]
 }
 
 function calculateAverageSale(sales: number[]): number {
-
+return sales.reduce((t,n)=>t+n)/sales.length
 }
 
 function countLargeTransactions(sales: number[], minimumAmount: number): number {
-
+  let a = 0;
+  sales.forEach(u=>{
+    if ( u > 500000 ) a++;
+  });
+  return a 
 }
+

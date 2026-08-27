@@ -23,8 +23,6 @@ const attendances = [
 ];
 let masuk = 0
 let gak:string[] = []
-
-
 function printAttendanceReport(student:student[]){
     for(let a of student){
         if(a.present){

@@ -22,6 +22,7 @@
  * - 1 void function to display the report.
  * 
  */
+type student={Nama:string, Submitted:boolean, Score:number}
 const submissions = [
     {
         student: "Alya",
