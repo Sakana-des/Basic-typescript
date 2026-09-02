@@ -14,7 +14,9 @@
  * 3. Find the student named "Citra".
  * 4. Calculate the average score.
  */
-
+let pass = 0
+let nope = 0
+let Nama:string[] = []
 const students = [
   { name: "Andi", score: 85 },
   { name: "Budi", score: 62 },
@@ -22,3 +24,14 @@ const students = [
   { name: "Deni", score: 74 },
   { name: "Eka", score: 55 },
 ];
+for(let i = 0; i < students.length; i++){
+  if(students[i].score >= 70){
+    pass++
+  }else{
+    nope++
+  }
+}
+
+  Nama = students.map(s=>s.name)
+console.log(Nama);
+console.log(`Passed Student ${pass}`);

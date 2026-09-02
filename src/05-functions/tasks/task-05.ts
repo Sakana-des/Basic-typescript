@@ -34,7 +34,7 @@ function findHighestScore(scores: number[]): number {
 }
 
 function findLowestScore(scores: number[]): number {
-  return scores.sort()[0]
+  return scores.sort()[0]//cilik nak gedi
 }
 
 function calculateAverage(scores: number[]): number {

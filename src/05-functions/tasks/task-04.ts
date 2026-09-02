@@ -21,6 +21,8 @@ const attendances = [
     { name: "Dimas", present: true },
     { name: "Eka", present: false }
 ];
+
+
 let masuk = 0
 let gak:string[] = []
 function printAttendanceReport(student:student[]){

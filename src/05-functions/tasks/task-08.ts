@@ -22,8 +22,8 @@
  * - 1 void function to display the report.
  * 
  */
-type student={Nama:string, Submitted:boolean, Score:number}
-const submissions = [
+type student={student:string, submitted:boolean, score:number}
+const submissions:student[] = [
     {
         student: "Alya",
         submitted: true,
@@ -55,3 +55,18 @@ const submissions = [
         score: 96
     }
 ];
+function calculateTotalStudent(submission: student[]){
+    return submission.length;
+}
+function calculateSubmitted(submission: student[]){
+    return submission.filter(student=>student.submitted).length
+}
+function calculateMissingAssignment(submission: student[]){
+    return submission.filter(sub=>!sub.submitted).length
+}
+function passedStudent(submission: student[]){
+    
+}
+console.log(calculateTotalStudent(submissions));
+console.log(calculateSubmitted(submissions));
+console.log(calculateMissingAssignment(submissions));

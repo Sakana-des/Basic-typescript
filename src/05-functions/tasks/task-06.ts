@@ -48,3 +48,4 @@ function countLargeTransactions(sales: number[], minimumAmount: number): number 
   return a 
 }
 
+console.log(calculateAverageSale(sales));
