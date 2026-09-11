@@ -6,7 +6,6 @@
  * 3. Find student who reach highest score 
  * 4. Calculate class's average score
  */
-
 const students = [
     {
         id: 1,
@@ -26,3 +25,33 @@ const students = [
 ];
 
 const correctAnswers = ["A", "B", "C", "A", "B"];
+    const koreksi = students.map((student)=>{
+        const correct = student.answers.filter(
+            (jawaban,index) => jawaban === correctAnswers[index]
+        ).length;
+
+        const hasil = correct * 20;
+
+        return {
+            id:student.id,
+            name:student.name,
+            score: hasil
+        }
+    }
+)
+let score:number[] = []
+console.log(koreksi);
+for(let i = 0; i < students.length; i++){
+        if(koreksi[i].score > 70){
+            console.log("Passed ", koreksi[i]);
+        }
+        score.push(koreksi[i].score)
+    }
+if(score.sort((a,b)=>b-a)[0]){
+    console.log(koreksi);
+}
+
+for(let i = 0; i < students.length; i++){
+
+}
+console.log("Highest score ");

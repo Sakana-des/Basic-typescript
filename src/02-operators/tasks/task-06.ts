@@ -13,17 +13,20 @@
  * - Discount amount
  * - Final payment
  */
-const jam:number = 7,
+let jam:number = 7,
       menit:number = 35,
       JamMenit:number = 60,
       PerHour:number = 8000,
       discount:number = 0.15,
       fullHours:Boolean = false;
 
-      const TotalBilled = fullHours? jam + 0: jam + 1,
-            totalplay = jam * JamMenit + menit,
-            RemainMinute = totalplay % 60;
-            // disc = TotalBilled > 5 =  * discount,
-            // Pay = 
-console.log(TotalBilled, totalplay, RemainMinute);
+        jam += fullHours? 0: 1
+        let totalplay = jam * JamMenit
+        let totalbill = PerHour * jam
+        let RemainMinute = JamMenit - menit
+        let dis = discount * totalbill ;
+        let final = totalbill - dis
+
+
+console.log(totalplay,RemainMinute, jam, totalbill, dis, final);
 

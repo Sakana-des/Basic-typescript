@@ -24,3 +24,28 @@
  * - Final bill
  * - Green Energy Program eligibility
  */
+
+let pev = 25640,
+    Cur = 25892,
+    Price = 1650, //perkwh
+    solar:boolean = true,
+    saving:boolean = false,
+    disc = 0.20,
+    a = 0
+    
+
+let totalUSG = Cur - pev;
+console.log(`Total energy consump ${totalUSG}`);
+let bill = totalUSG * Price;
+console.log(`Electricity bill ${bill}`);
+if(solar == true){
+    a = bill - disc
+}else{
+    a = bill
+}
+console.log(`Final bill ${a}`);
+if(solar && totalUSG < 300 && saving){
+    console.log(`Green Energy Program Eligible`);
+}else{
+    console.log(`Green Energy Program Not Eligible`);
+}

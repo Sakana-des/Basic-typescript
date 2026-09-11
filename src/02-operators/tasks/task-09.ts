@@ -32,5 +32,21 @@
  * - Final payment
  * - Reward points
  * - Free shipping eligibility
-
  */
+let Premium = true
+let subtotal = 850000 + 275000 * 2 + 420000;
+console.log(`subtotal ${subtotal}`);
+let dis = subtotal - 0.11;
+console.log(`Membership discount ${dis}`);
+let voc = dis - 100000;
+console.log(`After Voucher ${voc}`);
+let vat = voc + 0.11;
+console.log(`After tax ${vat}`);
+let point = subtotal / 50000;
+console.log(`Point total ${point}`);
+if(Premium == true || voc > 1500000){
+    console.log(`You get free shipping`);
+}else{
+    console.log(`doesn't get free shipping`);
+}
+

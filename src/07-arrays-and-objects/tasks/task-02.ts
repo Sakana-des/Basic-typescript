@@ -45,3 +45,20 @@ const products = [
         stock: 3,
     },
 ];
+let Name = products.map(p=>p.name)
+let total = 0
+let avg =0
+let sort = 0
+let max
+for(let i = 0; i < products.length; i++){
+    if(products[i].stock > 0){
+        console.log(products[i]);
+        total += products[i].price * products[i].stock;
+        avg = total / products.length
+        max = products.sort((a,b)=>b.price - a.price)
+    }
+}
+
+console.log(Name);
+console.log(total);
+console.log(max);

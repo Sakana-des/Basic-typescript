@@ -20,3 +20,15 @@ const scores = [92, 68, 84, 73, 95, 61, 88];
  * 
  * Instead of creating four separate loops, create a reusable function that receives a callback responsible for transforming a score.
  */
+
+function procces(
+    isi : number[],
+    panggil : (score :number)=>void
+):void{
+    for(let i = 0; i > isi.length; i++)
+        panggil (isi[i])
+}
+
+function passGrade(a : number){
+    
+}

@@ -21,3 +21,24 @@ const products = [
  * 
  * Instead of creating a separate loop for every operation, the developer creates a reusable processing function.
  */
+type produk = {name:string, price:number}
+function process (
+    product : produk[],
+    callback:(product:produk)=>void
+):void{
+    for (let i = 0; i < products.length; i++) {
+        callback(product[i])
+    }
+}
+
+function xpensive(a:produk){
+    if ( a.price > 1000000)
+        console.log(`Produk yang harganya 1jt keatas: ${a.name}`)
+}
+
+function diskonable(a:produk){
+    if(a.price > 500000)console.log(`Produk yang mendapat diskon 10%: ${a.name} ${a.price - 0.1 * a.price}`)
+}
+
+process(products, xpensive)
+process(products, diskonable)

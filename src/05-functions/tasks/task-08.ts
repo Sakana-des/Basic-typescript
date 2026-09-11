@@ -65,8 +65,26 @@ function calculateMissingAssignment(submission: student[]){
     return submission.filter(sub=>!sub.submitted).length
 }
 function passedStudent(submission: student[]){
-    
+    let a:string[] = []
+    for(let i = 0; i < submission.length; i++){
+        if(submission[i].score <= 75)a.push(submission[i].student)
+    }
+    return a
 }
+function studentReqRevision(submission:student[]){
+    return submission
+        .filter(p => p.score >= 75)
+        .map(p => p.student)
+}
+function calculateAvgScore(submission:student[]){
+    const total = submission.reduce((sum,p)=> sum + p.score,0);
+    return total / submission.length
+}
+
+
 console.log(calculateTotalStudent(submissions));
 console.log(calculateSubmitted(submissions));
 console.log(calculateMissingAssignment(submissions));
+console.log(passedStudent(submissions));
+console.log(studentReqRevision(submissions));
+console.log(calculateAvgScore(submissions));

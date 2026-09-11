@@ -7,8 +7,8 @@
  * - Display the names of absent students.
  * - Calculate the attendance percentage.
  */
-
-const attendances = [
+type student = {name:string, present:boolean};
+const attendances:student[] = [
   { name: "Alya", present: true },
   { name: "Budi", present: true },
   { name: "Citra", present: false },
@@ -18,5 +18,15 @@ const attendances = [
   { name: "Gita", present: true },
   { name: "Hana", present: false }
 ];
-let p = 0
 let a = 0
+let b = 0
+let l:string[] = []
+for(let i = 0;i < attendances.length; i++){
+  if(attendances[i].present){
+    a++
+  }else{
+    b++
+    l.push(attendances[i].name)
+  }
+}
+console.log(a,b,l,a / attendances.length * 100 + "%");

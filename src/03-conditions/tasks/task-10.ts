@@ -22,7 +22,7 @@ If these requirements are satisfied, continue.
 Otherwise:
 Academic Requirements Not Met
 
-Step 3 — Seat Availability
+Stp 3 — Seat Availability
 If seats are still available:
 - Registration Successful
 Otherwise:
@@ -45,3 +45,23 @@ Student Tasks
 - Use nested conditional statements.
 - Display the final registration result.
  */
+let active = true
+let paid = true
+let passFun = true
+let passDat = true
+let GPA = 3.45
+let Seat = false
+
+if(active && paid){
+    if(passFun && passDat && GPA >= 3.20){
+        if(Seat){
+            console.log(`Registration succes`);
+        }else{
+            console.log(`Added to waiting list`);
+        }
+    }else{
+        console.log(`Academic Requirement not met`);
+    }
+}else{
+    console.log(`Reject`);
+}
