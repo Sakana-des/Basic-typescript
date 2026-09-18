@@ -39,19 +39,24 @@ const correctAnswers = ["A", "B", "C", "A", "B"];
         }
     }
 )
-let score:number[] = []
-console.log(koreksi);
-for(let i = 0; i < students.length; i++){
-        if(koreksi[i].score > 70){
-            console.log("Passed ", koreksi[i]);
+
+const passedStudents = koreksi.filter(
+    (student) => student.score > 70
+);
+
+const highestStudent = koreksi.reduce(
+    (highest, student) => {
+        if (student.score > highest.score) {
+            return student;
         }
-        score.push(koreksi[i].score)
-    }
-if(score.sort((a,b)=>b-a)[0]){
-    console.log(koreksi);
-}
+        return highest;
+    });
 
-for(let i = 0; i < students.length; i++){
+const totalScore = koreksi.reduce(
+    (total, student) => total + student.score,0);
+const averageScore = totalScore / koreksi.length;
 
-}
-console.log("Highest score ");
+console.log("Student scores:", koreksi);
+console.log("Passed students:", passedStudents);
+console.log("Highest student:", highestStudent);
+console.log("Average score:", averageScore);

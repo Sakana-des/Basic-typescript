@@ -42,13 +42,80 @@
  * isAvailable(): returns true when stock > 0, otherwise false
  * getInventoryValue(): calculate price × stock
  */
+class product {
+  productID: string;
+  name: string;
+  private price: number;
+  private stock: number;
 
-const laptop = new Product(
+  constructor(productID: string, name: string, price: number, stock: number) {
+    this.productID = productID;
+    this.name = name;
+    this.price = price;
+    this.stock = stock;
+  }
+
+  addStock(stock:number): void {
+    if (stock > 0) {
+      this.stock = stock;
+      console.log(``);
+      console.log(`addStock success`);
+    } else {
+      console.log(`changePrice failed`);
+    }
+  }
+  removeStock(stock: number): void {
+    if (stock > 0 && stock <= this.stock) {
+      this.stock = stock;
+      console.log(``);
+      console.log(`removeStock success`);
+    } else {
+      console.log(`changePrice failed`);
+    }
+    
+  }
+
+  changePrice(price: number): void {
+    if (price > 0) {
+      this.price = price;
+      console.log(``);
+      console.log(`changePrice success`);
+    } else {
+      console.log(`changePrice failed`);
+    }
+    
+  }
+
+  isAvailable(): void {
+    if (this.stock > 0) {
+      console.log(`true`);
+    } else {
+      console.log(`lorem failed`);
+    }
+    
+  }
+
+  getInventoryValue(): number {
+    return this.stock * this.price
+  }
+
+  showProductInfo():void{
+    console.log(`=== product info ===`);
+    console.log(`ProductID: ${this.productID}`);
+    console.log(`Name Product: ${this.name}`);
+    console.log(`Harga Product: ${this.price}`);
+    console.log(`Stock Product: ${this.stock}`);
+    
+  }
+}
+
+const laptop = new product(
     "PRD001",
     "Gaming Laptop",
     15000000,
     20
 );
+laptop.showProductInfo()
 
 laptop.addStock(5);
 

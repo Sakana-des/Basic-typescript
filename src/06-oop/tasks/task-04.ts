@@ -39,6 +39,63 @@
  * - Implement class with object
  */
 
+class Employee {
+  EmployeeID: string;
+  Name: string;
+  Position: string;
+  basicSalary: number;
+  Bonus: number;
+
+  constructor(EmployeeID: string, Name: string, Position: string, basicSalary: number, Bonus: number = 0) {
+    this.EmployeeID = EmployeeID;
+    this.Name = Name;
+    this.Position = Position;
+    this.basicSalary = basicSalary;
+    this.Bonus = Bonus; 
+    
+  }
+
+  getTotalSalary():number{
+  return this.basicSalary + this.Bonus
+  }
+
+  addBonus(Bonus: number): void {
+    if (Bonus > 0) {
+      this.Bonus = Bonus
+      console.log(``);
+      console.log(`Bonus add success`);
+    } else {
+        console.log(``);
+      console.log(`lorem failed`);
+    }
+    
+  }
+
+  getBasicSalary():number{
+    return this.basicSalary
+  }
+
+  setBasicSalary(basicSalary: number): void {
+    if (basicSalary > 0 ) {
+    this.basicSalary=basicSalary 
+    console.log(``);
+      console.log(`Set salary success`);
+    } else {
+        console.log(``);
+      console.log(`Set salary failed`);
+    }
+    
+  }
+
+  showProfile(){
+    console.log(`=== profile ===`);
+    console.log(`EmployeeID ${this.EmployeeID}`);
+    console.log(`Name ${this.Name}`);
+    console.log(`Position ${this.Position}`);
+    console.log(`BasicSalary ${this.basicSalary}`);
+    console.log(`bonus ${this.Bonus}`);
+  }
+}
 
 const employee = new Employee(
     "EMP001",
@@ -48,5 +105,5 @@ const employee = new Employee(
 );
 
 employee.addBonus(2000000);
-
+employee.showProfile()
 console.log(employee.getTotalSalary());

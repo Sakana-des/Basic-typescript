@@ -29,3 +29,61 @@
  *   - isAvailable()
  * - implement class with at least 2 objects
  */
+class Book {
+    ISBN:string;
+    Title:string;
+    Author:string;
+    TotalPages:number;
+    BorrowStatus:boolean;
+
+  constructor(ISBN: string,Title:string,Author:string,Totalpages:number,BorrowStatus:boolean) {
+    this.ISBN = ISBN,
+    this.Title = Title,
+    this.Author = Author,
+    this.TotalPages = Totalpages,
+    this.BorrowStatus = BorrowStatus
+  }
+    isAvaiable():boolean{
+    return !this.BorrowStatus
+    }
+
+    borrow():void{
+    if(!this.BorrowStatus){
+        this.BorrowStatus = true
+        console.log(`Berhasil Dipinjam `);
+    }else{
+        console.log(`TIdak dapat dipinjam`);
+    }
+    }
+
+    returnBook(): void {
+      if (this.BorrowStatus) {
+        this.BorrowStatus = false;
+        console.log(`Dikembalikan success`);
+      } else {
+        console.log(`Dikembalikan failed`);
+      }
+      
+    }
+
+    ShowInfo():void{
+    console.log(`=== BookInfo ===`);
+    console.log(`ISBN ${this.ISBN}`);
+    console.log(`Title ${this.Title}`);
+    console.log(`Author ${this.Author}`);
+    console.log(`TotalPages ${this.TotalPages}`);
+    console.log(`BorrowStatus ${this.BorrowStatus}`);
+    }
+
+}
+
+const Book1 = new Book("0000-0000-0000","Doki Doki Suru", "Wibu akut",999,true)
+const Book2 = new Book("0000-0000-0001","Doki Doki Suki", "Penghina Wibu akut",1,false)
+
+Book1.returnBook()
+Book1.ShowInfo()
+
+console.log(``);
+
+Book2.borrow()
+Book2.ShowInfo()

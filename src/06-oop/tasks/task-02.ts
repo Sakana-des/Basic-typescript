@@ -38,3 +38,60 @@
  * - Amount must be greater than 0.
  * - Amount cannot exceed the current balance.
  */
+
+class DigitalWallet{
+    private balance : number;
+    WalletID:string;
+    Owner:string;
+    
+    constructor(initialBalance:number, WalletID:string, Owner:string){
+        this.balance = initialBalance;
+        this.WalletID = WalletID;
+        this.Owner = Owner;
+    }
+
+    getBalance(): number{
+        return this.balance
+    }
+
+    deposit(amount:number):void{
+    if(amount > 0){
+        this.balance += amount
+        console.log(`=====================`);
+        console.log(`Deposited: ${amount}`);
+    }else{
+        console.log(`Invalid amount`);
+    }
+    }
+
+    showWalletInfo():void{
+        console.log(`====== profile ======`);
+        console.log(`WalletID: ${this.WalletID}`);
+        console.log(`Owner: ${this.Owner}`);
+        console.log(`Balance: ${this.balance}`);
+        console.log(`=====================`);
+    }
+
+    Info():void{
+        
+    }
+
+    withdraw(amount: number): void {
+    if (amount > 0 && amount <= this.balance) {
+        this.balance -= amount;
+        console.log(`=====================`);
+        console.log("Withdrawn: " + amount);
+    } else {
+        console.log("Invalid amount");
+    }
+  }
+}
+const user1 = new DigitalWallet(10000,"CH102","Mesii")
+user1.deposit(10000)
+user1.withdraw(15000)
+
+user1.showWalletInfo()
+
+
+
+

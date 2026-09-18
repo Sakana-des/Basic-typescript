@@ -34,10 +34,45 @@
  * for get value of package weight
  */
 
+class Shipping {
+    constructor (
+        public trackingNumber : string,
+        public destination : string,
+        protected packageWeight : number,
+    ) {}
+    calculateCost () : number {
+        return 0
+    }
+    getWeight () : number {
+        return this.packageWeight
+    }
+}
+class RegularShipping extends Shipping {
+    calculateCost () : number {
+        return this.packageWeight * 10000
+    }
+}
+class ExpressShipping extends Shipping {
+    calculateCost () : number {
+        return this.packageWeight * 20000
+    }
+}
+class SameDayShipping extends Shipping {
+    calculateCost () : number {
+        return this.packageWeight * 30000
+    }
+}
+class InternationalShipping extends Shipping {
+    calculateCost () : number {
+        return this.packageWeight * 100000
+    }
+}
+
 const shipments: Shipping[] = [
-  regularShipping,
-  expressShipping,
-  sameDayShipping
+  new RegularShipping ("REG001","Malang",3),
+  new ExpressShipping ("EXP001","Surabaya",2),
+  new SameDayShipping ("SMD001","Jakarta",4),
+  new InternationalShipping ("INT001","Folk valley",10)
 ];
 
 for (const shipment of shipments) {

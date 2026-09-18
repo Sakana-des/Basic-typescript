@@ -33,3 +33,12 @@ const posts = [
     likes: 300,
   },
 ];
+const typescriptPost = posts.find((p) => p.hashtags.includes("typescript"));
+const nestjsPost = posts.find((p) => p.hashtags.includes("nestjs"));
+const mostLikedPost = posts.find((p) => p.likes === Math.max(...posts.map((post) => post.likes)));
+const totalLikes = posts.reduce((t, p) => t + p.likes, 0);
+
+console.log("TypeScript post:", typescriptPost);
+console.log("NestJS post:", nestjsPost);
+console.log("Highest likes:", mostLikedPost);
+console.log("Total likes:", totalLikes);

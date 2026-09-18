@@ -72,3 +72,93 @@ const submissions = [
     },
 ];
 
+const studentScores = submissions.map((submission) => {
+
+    const correct = submission.answers.filter((answer) => {
+
+        const question = questions.find(
+            (question) => question.id === answer.questionId
+        )!;
+
+        return question.correctAnswer === answer.answer;
+
+    }).length;
+
+    return {
+        student: submission.student,
+        score: correct * 25
+    };
+})
+
+const studentResults = submissions.map((submission) => {
+
+    const correct = submission.answers.filter((answer) => {
+
+        const question = questions.find(
+            (question) => question.id === answer.questionId
+        )!;
+
+        return question.correctAnswer === answer.answer;
+
+    }).length;
+
+    return {
+        student: submission.student,
+        correct: correct,
+        wrong: questions.length - correct
+    };
+});
+
+const categoryScores: { [key: string]: number[] } = {};
+
+submissions.forEach((submission) => {
+
+    submission.answers.forEach((answer) => {
+
+        const question = questions.find(
+            (question) => question.id === answer.questionId
+        )!;
+
+        if (!categoryScores[question.category]) {
+            categoryScores[question.category] = [];
+        }
+
+        if (question.correctAnswer === answer.answer) {
+            categoryScores[question.category].push(25);
+        } else {
+            categoryScores[question.category].push(0);
+        }
+
+    });
+
+});
+
+const averageScoreByCategory: { [key: string]: number } = {};
+
+for (const category in categoryScores) {
+
+    averageScoreByCategory[category] =
+        categoryScores[category].reduce(
+            (total, score) => total + score,
+            0
+        ) / categoryScores[category].length;
+}
+
+const averageScore = studentScores.reduce((total, student) => total + student.score,0) / studentScores.length;
+const highestScore = Math.max(...studentScores.map((student) => student.score));
+const lowestScore = Math.min(...studentScores.map((student) => student.score));
+const passedStudents = studentScores.filter((student) => student.score >= 75).length;
+const failedStudents = studentScores.filter((student) => student.score < 75).length;
+const passRate = (passedStudents / studentScores.length) * 100;
+
+const finalAnalytics = {
+    totalStudents: submissions.length,
+    averageScore: Number(averageScore.toFixed(2)),
+    highestScore: highestScore,
+    lowestScore: lowestScore,
+    passedStudents: passedStudents,
+    failedStudents: failedStudents,
+    passRate: Number(passRate.toFixed(2))
+};
+
+console.log("Final Analytics:", finalAnalytics);

@@ -1,3 +1,5 @@
+import { afterEach } from "node:test";
+
 /**
  * A school system needs to store information about people who are part of the school community. 
  * Every person has a name and age.
@@ -37,9 +39,39 @@ class Person {
     constructor(
         public name: string,
         public age: number
-    ) { }
+    ) {
+        this.name = name
+        this.age = age
+     }
 
     showInfo(): void {
         console.log(`${this.name}, ${this.age} years old`);
     }
 }
+
+    class Student extends Person{
+        constructor(
+            name:string,
+            age:number,
+            public ID:string,
+            public Grade:number
+        ){
+            super(name,age)
+        }
+    }
+
+    class Teacher extends Person {
+        constructor(
+            name: string,
+            age: number,
+            public ID:string,
+            public Subject: string
+        ) {
+            super(name, age);
+        }
+    }
+const student =  new Student("Kylian mbappe", 17, "ST001", 11)
+const teacher = new Teacher("Cristiano ronaldo", 38, "EMP001", "Programming")
+
+student.showInfo()
+teacher.showInfo()
